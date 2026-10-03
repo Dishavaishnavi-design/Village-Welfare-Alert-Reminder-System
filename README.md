@@ -191,6 +191,21 @@ If adapting this project for a live client with backend integration, future enha
 
 ## 💼 Business Pitch for Boutique Owners
 
+### Short Pitch
+
+* **Who the business is:**  
+  A local fashion boutique offering stylish and affordable clothing for women.
+
+* **What problem the website solves:**  
+  The website gives the boutique a professional online presence where customers can easily discover the business, explore its collections, and find contact information.
+
+* **How it helps attract customers:**  
+  The modern and mobile-friendly website allows potential customers to view the boutique's products online and contact the business easily, helping the boutique reach more customers beyond its local walk-in audience.
+
+---
+
+### Detailed Pitch
+
 > *"Dear Boutique Owner,*  
 > *In today's fashion market, your local boutique's craftsmanship deserves to be seen beyond your storefront window. Most of your prospective customers search for sarees, custom blouse stitching, and bridal wear on their mobile phones before ever stepping into a shop.*  
 >  

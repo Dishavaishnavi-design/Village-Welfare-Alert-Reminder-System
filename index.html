@@ -1,238 +1,1013 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Village Welfare Alert & Reminder System (VWARS)</title>
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Official platform for village welfare schemes, pension release notifications, scholarship deadlines, health camps, and volunteer alert assistance.">
-  <meta name="keywords" content="village welfare, government schemes, pension, scholarship, health camp, rural support">
-  <!-- Fonts -->
+  <meta name="description" content="Elegance Boutique - Discover thoughtfully curated ethnic and contemporary Indian fashion, bespoke blouses, sarees, lehengas & bridal wear.">
+  <meta name="keywords" content="Boutique, Indian Fashion, Ethnic Wear, Sarees, Lehengas, Designer Blouses, Bridal Wear, Custom Tailoring">
+  <meta name="author" content="Elegance Boutique">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Elegance Boutique | Ethnic & Contemporary Fashion">
+  <meta property="og:description" content="Timeless ethnic styles & contemporary Indian fashion curated for every special occasion.">
+  <meta property="og:image" content="images/hero-bg.svg">
+  <meta property="og:type" content="website">
+
+  <title>Elegance Boutique | Ethnic & Contemporary Fashion</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/app.css">
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="gov-top-bar">
-    <div class="container flex justify-between align-center">
-      <span class="gov-notice">
-        <span class="flag-icon">🇮🇳</span> Official Government Initiative &bull; Digital Gram Panchayat Portal
-      </span>
-      <div class="gov-links flex align-center gap-3">
-        <a href="#about" class="gov-link">About Portal</a>
-        <a href="#faq" class="gov-link">Help & FAQ</a>
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-          <i data-lucide="moon" class="theme-icon-dark"></i>
-          <i data-lucide="sun" class="theme-icon-light hidden"></i>
-        </button>
-      </div>
+  <!-- Announcement Bar / Business Note -->
+  <div class="demo-bar">
+    <div class="container demo-bar-content">
+      <span>✨ <strong>Demo Business Website:</strong> Structure ready for customization with real boutique details.</span>
+      <a href="#contact" class="demo-bar-link">View Location & Contact</a>
     </div>
   </div>
 
-  <!-- Main Navigation Header -->
-  <header class="main-header">
-    <div class="container flex justify-between align-center">
-      <!-- Logo Branding -->
-      <a href="#home" class="logo-link flex align-center gap-2">
-        <div class="logo-icon flex align-center justify-center">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        </div>
-        <div class="logo-text">
-          <h1 class="logo-title">VWARS</h1>
-          <p class="logo-subtitle">Village Welfare System</p>
-        </div>
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="brand-logo" aria-label="Elegance Boutique Home">
+        <span class="logo-symbol">✨</span>
+        <span class="logo-text">
+          <span class="logo-title">Elegance</span>
+          <span class="logo-subtitle">BOUTIQUE</span>
+        </span>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="desktop-nav">
-        <ul class="nav-list flex gap-4">
-          <li><a href="#home" class="nav-item active" id="nav-home">Home</a></li>
-          <li><a href="#schemes" class="nav-item" id="nav-schemes">Welfare Schemes</a></li>
-          <li><a href="#alerts" class="nav-item" id="nav-alerts">Alerts</a></li>
-          <!-- Citizen Nav Items (dynamic) -->
-          <li class="auth-required citizen-only hidden"><a href="#citizen-dashboard" class="nav-item" id="nav-citizen-dashboard">My Dashboard</a></li>
-          <!-- Volunteer Nav Items (dynamic) -->
-          <li class="auth-required volunteer-only hidden"><a href="#volunteer-dashboard" class="nav-item" id="nav-volunteer-dashboard">Volunteer Dashboard</a></li>
-          <!-- Admin Nav Items (dynamic) -->
-          <li class="auth-required admin-only hidden"><a href="#admin-dashboard" class="nav-item" id="nav-admin-dashboard">Admin Panel</a></li>
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#collections" class="nav-link">Collections</a></li>
+          <li class="nav-item"><a href="#featured" class="nav-link">Featured</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="#offers" class="nav-link">Offers</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#business-impact" class="nav-link highlight-link">Business Value</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Auth Controls / Profile Menu -->
-      <div class="auth-actions flex align-center gap-3">
-        <div id="logged-out-actions" class="flex gap-2">
-          <a href="#login" class="btn btn-outline" id="btn-login-nav">Login</a>
-          <a href="#register" class="btn btn-primary" id="btn-register-nav">Register</a>
-        </div>
-        <div id="logged-in-actions" class="flex align-center gap-3 hidden">
-          <div class="user-profile-badge flex align-center gap-2">
-            <span class="user-avatar" id="nav-user-avatar">C</span>
-            <div class="user-meta text-left">
-              <p class="user-name-text" id="nav-user-name">Citizen User</p>
-              <span class="badge badge-role" id="nav-user-role">Citizen</span>
-            </div>
-          </div>
-          <button id="btn-logout" class="btn btn-sm btn-outline-danger">Logout</button>
-        </div>
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-toggle" class="btn-icon mobile-only" aria-label="Toggle Menu">
-          <i data-lucide="menu"></i>
+      <div class="nav-actions">
+        <a href="#enquiry" class="btn btn-primary nav-cta">Enquire Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div id="mobile-nav-drawer" class="mobile-drawer hidden">
-    <div class="drawer-header flex justify-between align-center p-3 border-bottom">
-      <span class="drawer-title font-bold text-lg">Menu</span>
-      <button id="mobile-menu-close" class="btn-icon">
-        <i data-lucide="x"></i>
-      </button>
-    </div>
-    <ul class="drawer-list p-3">
-      <li><a href="#home" class="drawer-item active">Home</a></li>
-      <li><a href="#schemes" class="drawer-item">Welfare Schemes</a></li>
-      <li><a href="#alerts" class="drawer-item">Alerts</a></li>
-      <li class="auth-required citizen-only hidden"><a href="#citizen-dashboard" class="drawer-item">My Dashboard</a></li>
-      <li class="auth-required volunteer-only hidden"><a href="#volunteer-dashboard" class="drawer-item">Volunteer Dashboard</a></li>
-      <li class="auth-required admin-only hidden"><a href="#admin-dashboard" class="drawer-item">Admin Panel</a></li>
-      <li><a href="#about" class="drawer-item">About Portal</a></li>
-      <li><a href="#faq" class="drawer-item">Help & FAQ</a></li>
-      <li class="mt-3 border-top pt-3 guest-only">
-        <a href="#login" class="btn btn-outline w-full mb-2 block text-center">Login</a>
-        <a href="#register" class="btn btn-primary w-full block text-center">Register</a>
-      </li>
-      <li class="mt-3 border-top pt-3 logged-in-only hidden">
-        <button id="btn-logout-mobile" class="btn btn-outline-danger w-full">Logout</button>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Dynamic Views Mount Point -->
-  <main id="app-view" class="app-main-content">
-    <!-- View content is dynamically injected here by views.js -->
-  </main>
-
-  <!-- Notification Toast Container -->
-  <div id="toast-container" class="toast-wrapper"></div>
-
-  <!-- Device Simulation Screen (For Mock SMS / Email Viewer) -->
-  <div id="device-modal" class="device-modal hidden">
-    <div class="device-frame">
-      <div class="device-header">
-        <div class="camera"></div>
-        <div class="speaker"></div>
-      </div>
-      <div class="device-screen">
-        <div class="mobile-status-bar flex justify-between px-3 py-1 text-xs">
-          <span>9:41 AM</span>
-          <div class="flex gap-1">
-            <i data-lucide="signal" class="w-3 h-3"></i>
-            <i data-lucide="wifi" class="w-3 h-3"></i>
-            <i data-lucide="battery" class="w-3 h-3"></i>
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <span class="hero-badge">✨ Curated Ethnic &amp; Contemporary Fashion</span>
+          <h1 class="hero-title">Elegance That Defines You</h1>
+          <p class="hero-subtitle">
+            Discover thoughtfully curated ethnic and contemporary fashion for every special occasion.
+          </p>
+          <div class="hero-buttons">
+            <a href="#collections" class="btn btn-primary">Explore Collection</a>
+            <a href="#enquiry" class="btn btn-outline">Enquire Now</a>
           </div>
-        </div>
-        <!-- Phone View Header -->
-        <div class="phone-app-header flex align-center p-2">
-          <button class="phone-back-btn mr-2"><i data-lucide="chevron-left"></i></button>
-          <div class="flex align-center gap-2">
-            <div class="phone-avatar">🏛️</div>
-            <div>
-              <h5 class="phone-sender" id="phone-sender-name">Gov-Welfare</h5>
-              <p class="phone-status">Online</p>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🌸</span>
+              <span class="highlight-text">Handcrafted Sarees</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">✂️</span>
+              <span class="highlight-text">Custom Tailoring</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">👑</span>
+              <span class="highlight-text">Bridal Consultation</span>
             </div>
           </div>
         </div>
-        <!-- Phone Chat Body -->
-        <div class="phone-app-body" id="phone-chat-body">
-          <!-- Text message bubble will be injected here -->
-        </div>
-        <!-- Phone Keyboard Mock -->
-        <div class="phone-app-footer p-2 flex align-center gap-2">
-          <input type="text" class="phone-input w-full" placeholder="Text Message" readonly>
-          <button class="phone-send-btn"><i data-lucide="arrow-up" class="w-4 h-4"></i></button>
-        </div>
       </div>
-      <div class="device-home-bar" id="device-close-bar"></div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Global Modal Dialog Overlay -->
-  <div id="global-modal" class="modal-overlay hidden">
-    <div class="modal-box">
-      <div class="modal-header flex justify-between align-center">
-        <h3 id="modal-title">Modal Title</h3>
-        <button id="modal-close" class="btn-icon-sm"><i data-lucide="x"></i></button>
-      </div>
-      <div class="modal-body" id="modal-body">
-        <!-- Content injected here -->
-      </div>
-    </div>
-  </div>
+    <!-- 3. ABOUT THE BOUTIQUE -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="grid grid-2-col about-grid align-center">
+          <div class="about-image-wrapper reveal">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" 
+                   onerror="this.onerror=null; this.src='images/about-boutique.svg';" 
+                   alt="Inside Elegance Boutique showroom displaying sarees and dresses" class="about-img">
+            </div>
+            <div class="about-badge">
+              <span class="badge-icon">💖</span>
+              <span class="badge-text">Personalized Fit &amp; Styling</span>
+            </div>
+          </div>
 
-  <!-- Main Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="flex align-center gap-2 mb-3">
-          <div class="logo-icon-footer">🏛️</div>
-          <h2 class="text-white text-xl font-bold">VWARS</h2>
+          <div class="about-content reveal">
+            <div class="section-header-left">
+              <span class="section-tagline">OUR STORY &amp; ETHOS</span>
+              <h2 class="section-title">About Elegance Boutique</h2>
+            </div>
+            <p class="lead-text">
+              Elegance Boutique brings together timeless ethnic styles and contemporary fashion, offering carefully selected outfits for everyday wear, celebrations and special occasions.
+            </p>
+            <p class="body-text">
+              We believe every ensemble should be a seamless reflection of grace, confidence, and comfort. Whether you are seeking a handpicked silk saree, a tailor-made embroidered blouse, or a stunning festive lehenga, our boutique provides dedicated attention to detail and fit.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-box">
+                <div class="feature-icon">✨</div>
+                <div>
+                  <h3 class="feature-box-title">Customer-Focused Approach</h3>
+                  <p class="feature-box-desc">Friendly, patient, and personalized shopping experience tailored to your unique preferences.</p>
+                </div>
+              </div>
+              <div class="feature-box">
+                <div class="feature-icon">👗</div>
+                <div>
+                  <h3 class="feature-box-title">Fashion &amp; Styling Focus</h3>
+                  <p class="feature-box-desc">Expert assistance in color coordination, drape selection, and occasion-specific outfit styling.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="#enquiry" class="btn btn-secondary">Visit Our Boutique</a>
+            </div>
+          </div>
         </div>
-        <p class="text-muted text-sm">Empowering villagers with direct access to welfare, pensions, scholarships, and active reminders. Enhancing transparency at the grassroots level.</p>
       </div>
-      <div class="footer-links-col">
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#schemes">Welfare Schemes</a></li>
-          <li><a href="#alerts">Alerts & Announcements</a></li>
-          <li><a href="#about">About Project</a></li>
-          <li><a href="#faq">FAQ & Help Desk</a></li>
-        </ul>
+    </section>
+
+    <!-- 4. COLLECTIONS SECTION -->
+    <section id="collections" class="section collections-section bg-cream">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">EXPLORE OUR RANGE</span>
+          <h2 class="section-title">Boutique Collections</h2>
+          <p class="section-subtitle">Carefully curated outfits designed for everyday elegance, grand celebrations, and festive moments.</p>
+        </div>
+
+        <div class="grid grid-3-col collections-grid">
+          <!-- Category 1: Sarees -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/saree-category.svg';" 
+                   alt="Silk and Banarasi Sarees Collection" class="card-img">
+              <span class="category-badge">Popular</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sarees</h3>
+              <p class="card-desc">Exquisite Kanjeevarams, soft silks, chiffons, and Banarasi drapes for traditional grace.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Sarees">View Collection &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Category 2: Designer Blouses -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/blouse-category.svg';" 
+                   alt="Custom Embroidered Designer Blouses" class="card-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Designer Blouses</h3>
+              <p class="card-desc">Hand-embroidered Maggam work, modern necklines, and custom-tailored designer blouse cuts.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Blouses">View Collection &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Category 3: Kurtis -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/kurti-category.svg';" 
+                   alt="Ethnic Designer Kurtis and Tunics" class="card-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Kurtis</h3>
+              <p class="card-desc">Comfortable cotton dailywear, Chanderi tunics, and elegant Anarkali kurtis for casual & workwear.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Kurtis">View Collection &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Category 4: Lehengas -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/lehenga-category.svg';" 
+                   alt="Royal Bridal and Festive Lehengas" class="card-img">
+              <span class="category-badge">Festive</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lehengas</h3>
+              <p class="card-desc">Royal wedding lehengas, festive semi-stitched sets, and lightweight sangeet ensembles.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Lehengas">View Collection &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Category 5: Ethnic Wear -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/ethnic-category.svg';" 
+                   alt="Indo-Western and Ethnic Suits" class="card-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ethnic Wear</h3>
+              <p class="card-desc">Sharara sets, ghararas, jacket suits, and fusion ensembles crafted for celebratory occasions.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Ethnic Wear">View Collection &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Category 6: Party Wear -->
+          <article class="card category-card reveal">
+            <div class="card-image-box">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/partywear-category.svg';" 
+                   alt="Contemporary Party Wear Gowns and Drapes" class="card-img">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Party Wear</h3>
+              <p class="card-desc">Contemporary cocktail gowns, pre-draped sarees, and modern silhouettes for evening galas.</p>
+              <button class="btn-text filter-btn-trigger" data-category="Other">View Collection &rarr;</button>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="footer-links-col">
-        <h4 class="footer-title">User Roles</h4>
-        <ul class="footer-links">
-          <li><a href="#login">Citizen Login</a></li>
-          <li><a href="#login">Volunteer Dashboard</a></li>
-          <li><a href="#login">Administrator Portal</a></li>
-          <li><a href="#register">Register as Citizen</a></li>
-        </ul>
+    </section>
+
+    <!-- 5. FEATURED COLLECTION -->
+    <section id="featured" class="section featured-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">SIGNATURE PIECES</span>
+          <h2 class="section-title">Featured Styles</h2>
+          <p class="section-subtitle">Handpicked highlights currently showcased at our boutique showroom.</p>
+        </div>
+
+        <div class="grid grid-3-col products-grid">
+          <!-- Product 1 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-silk-saree.svg';" 
+                   alt="Designer Silk Saree with Zari Border" class="product-img">
+              <span class="product-tag">Silk Collection</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Designer Silk Saree</h3>
+              <p class="product-desc">Pure handloom silk saree featuring detailed rich Zari border &amp; matching unstitched blouse piece.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹14,999)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Designer Silk Saree" data-category="Sarees">Enquire Now</button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-embroidered-blouse.svg';" 
+                   alt="Custom Embroidered Bridal Blouse" class="product-img">
+              <span class="product-tag">Custom Cut</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Embroidered Blouse</h3>
+              <p class="product-desc">Handcrafted Maggam work blouse with intricate zardozi, beadwork, and custom sleeve design.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹4,499)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Embroidered Blouse" data-category="Blouses">Enquire Now</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-festive-lehenga.svg';" 
+                   alt="Crimson Velvet Festive Lehenga" class="product-img">
+              <span class="product-tag">Festive Exclusive</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Festive Lehenga</h3>
+              <p class="product-desc">Crimson velvet &amp; raw silk flared lehenga set paired with a heavy hand-embroidered dupatta.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹24,999)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Festive Lehenga" data-category="Lehengas">Enquire Now</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-designer-kurti.svg';" 
+                   alt="Chanderi Silk Designer Kurti" class="product-img">
+              <span class="product-tag">Everyday Elegance</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Designer Kurti</h3>
+              <p class="product-desc">Pastel Chanderi silk tunic detailed with subtle sequin highlights and delicate thread work.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹3,299)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Designer Kurti" data-category="Kurtis">Enquire Now</button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-party-saree.svg';" 
+                   alt="Pre-draped Organza Party Saree" class="product-img">
+              <span class="product-tag">Modern Silhouette</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Party Wear Saree</h3>
+              <p class="product-desc">Lightweight organza drape saree with crystal border accents and designer halter blouse.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹8,999)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Party Wear Saree" data-category="Sarees">Enquire Now</button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="card product-card reveal">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" 
+                   onerror="this.onerror=null; this.src='images/product-bridal-collection.svg';" 
+                   alt="Royal Bridal Trousseau Ensemble" class="product-img">
+              <span class="product-tag">Bridal Trousseau</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Bridal Collection</h3>
+              <p class="product-desc">Grand bridal wedding ensemble with custom veil draping, double dupatta, and heirloom embroidery.</p>
+              <div class="product-meta">
+                <span class="product-price">Price on Enquiry</span>
+                <span class="sample-price">(Sample: ₹49,999)</span>
+              </div>
+              <button class="btn btn-primary btn-block enquiry-trigger" data-product="Bridal Collection Ensemble" data-category="Bridal Wear">Enquire Now</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-links-col">
-        <h4 class="footer-title">Important Contacts</h4>
-        <p class="text-muted text-sm mb-2"><strong>Toll Free Helpline:</strong> 1800-425-XXXX</p>
-        <p class="text-muted text-sm mb-2"><strong>Sachivalayam Desk:</strong> support@sachivalayam.gov.in</p>
-        <p class="text-muted text-sm"><strong>Grievance Redressal:</strong> grievance@gov.in</p>
+    </section>
+
+    <!-- 6. SERVICES -->
+    <section id="services" class="section services-section bg-cream">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">WHAT WE OFFER</span>
+          <h2 class="section-title">Boutique Services</h2>
+          <p class="section-subtitle">Dedicated fashion solutions designed to make every outfit fit and feel perfect.</p>
+        </div>
+
+        <div class="grid grid-3-col services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon-box">✂️</div>
+            <h3 class="service-title">Custom Blouse Design</h3>
+            <p class="service-desc">Tailor-made necklines, sleeve patterns, and hand embroidery customized to pair seamlessly with your sarees.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon-box">🧵</div>
+            <h3 class="service-title">Custom Tailoring</h3>
+            <p class="service-desc">Precision stitching and fit customization for lehengas, suit sets, and traditional festive wear.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon-box">📏</div>
+            <h3 class="service-title">Alterations</h3>
+            <p class="service-desc">Refining lengths, sleeve fittings, and waist measurements for existing outfits to ensure a flawless silhouette.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon-box">👗</div>
+            <h3 class="service-title">Styling Assistance</h3>
+            <p class="service-desc">In-store guidance on color harmony, dupatta draping styles, and accessory pairing for your special events.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon-box">👑</div>
+            <h3 class="service-title">Bridal Wear Consultation</h3>
+            <p class="service-desc">Private 1-on-1 trousseau planning sessions to help brides curate their dream wedding and reception looks.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon-box">✨</div>
+            <h3 class="service-title">Occasion Wear Selection</h3>
+            <p class="service-desc">Curated recommendations tailored for sangeet, haldi, mehendi, receptions, and festival gatherings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHY CHOOSE US -->
+    <section id="why-us" class="section why-us-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">THE ELEGANCE DIFFERENCE</span>
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">Why our valued customers trust Elegance Boutique for their fashion needs.</p>
+        </div>
+
+        <div class="grid grid-3-col why-grid">
+          <div class="why-card reveal">
+            <div class="why-num">01</div>
+            <h3 class="why-title">Curated Fashion</h3>
+            <p class="why-desc">Hand-selected fabrics and designs that balance traditional heritage with modern elegance.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-num">02</div>
+            <h3 class="why-title">Personalized Assistance</h3>
+            <p class="why-desc">Attentive in-person styling suggestions focused on your personal taste, body type, and occasion.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-num">03</div>
+            <h3 class="why-title">Custom Designs</h3>
+            <p class="why-desc">Tailored fitting options so your blouses, lehengas, and ethnic suits feel made just for you.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-num">04</div>
+            <h3 class="why-title">Quality-Focused Selection</h3>
+            <p class="why-desc">Careful inspection of fabrics, stitching durability, and embroidery finishing before display.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-num">05</div>
+            <h3 class="why-title">Occasion-Based Styling</h3>
+            <p class="why-desc">Tailored recommendations suited specifically for Haldi, Sangeet, Receptions, Poojas, or Parties.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-num">06</div>
+            <h3 class="why-title">Easy Enquiries</h3>
+            <p class="why-desc">Quick responses via our online enquiry form, phone call, or instant WhatsApp messaging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SPECIAL OFFERS -->
+    <section id="offers" class="section offers-section bg-rose-light">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">FEATURED HIGHLIGHTS</span>
+          <h2 class="section-title">Special Collections &amp; Offers</h2>
+          <p class="section-subtitle">Discover our seasonal showcases (Sample Demo Highlights)</p>
+        </div>
+
+        <div class="grid grid-2-col offers-grid">
+          <div class="offer-card reveal">
+            <div class="offer-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80" 
+                   onerror="this.onerror=null; this.src='images/offer-festive.svg';" 
+                   alt="Festive Collection Showcase Banner" class="offer-img">
+            </div>
+            <div class="offer-content">
+              <span class="offer-badge">Seasonal Showcase</span>
+              <h3 class="offer-title">Festive Collection</h3>
+              <p class="offer-desc">Explore our latest festive styles filled with rich shades, fine silk weaves, and celebratory charm.</p>
+              <a href="#collections" class="btn btn-primary">Explore Collection</a>
+            </div>
+          </div>
+
+          <div class="offer-card reveal">
+            <div class="offer-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80" 
+                   onerror="this.onerror=null; this.src='images/offer-bridal.svg';" 
+                   alt="Bridal and Wedding Collection Banner" class="offer-img">
+            </div>
+            <div class="offer-content">
+              <span class="offer-badge">Special Edition</span>
+              <h3 class="offer-title">Bridal &amp; Wedding Collection</h3>
+              <p class="offer-desc">Book a personalized bridal consultation and discover dream wedding trousseau ensembles.</p>
+              <a href="#enquiry" class="btn btn-outline-dark">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+        <p class="demo-note text-center mt-3">* Demo / sample offer highlights presented for boutique demonstration.</p>
+      </div>
+    </section>
+
+    <!-- 9. GALLERY -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">BOUTIQUE SHOWCASE</span>
+          <h2 class="section-title">Gallery</h2>
+          <p class="section-subtitle">Take a glimpse inside Elegance Boutique, our displays, and handcrafted outfits.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="saree">Sarees</button>
+          <button class="filter-btn" data-filter="blouse">Blouses</button>
+          <button class="filter-btn" data-filter="lehenga">Lehengas</button>
+          <button class="filter-btn" data-filter="interior">Boutique Interior</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-3-col gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item reveal" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-interior.svg';" 
+                 alt="Boutique Interior & Showroom Lounge" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Boutique Interior</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item reveal" data-category="saree">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-saree-display.svg';" 
+                 alt="Handpicked Silk Sarees Display" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Silk Saree Display</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item reveal" data-category="blouse">
+            <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-stitching.svg';" 
+                 alt="Custom Tailored Embroidery Atelier" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Maggam Embroidery Atelier</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item reveal" data-category="lehenga">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-lehenga-detail.svg';" 
+                 alt="Zari & Sequin Embroidery Detail" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Bridal Lehenga Craftsmanship</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item reveal" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-styling-session.svg';" 
+                 alt="Personalized Client Styling Consultation Area" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Styling Consultation Area</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item reveal" data-category="saree">
+            <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" 
+                 onerror="this.onerror=null; this.src='images/gallery-dupatta-drape.svg';" 
+                 alt="Designer Dupattas and Drape Sarees" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">🔍</span>
+              <span class="gallery-caption">Designer Dupatta Drapes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Image Lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous Image">&#10094;</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next Image">&#10095;</button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
       </div>
     </div>
-    <div class="footer-bottom text-center">
-      <div class="container flex justify-between align-center flex-col md-flex-row gap-3">
-        <p class="text-xs text-muted">&copy; 2026 Department of Rural Development & Panchayat Raj. All rights reserved.</p>
-        <div class="flex gap-3 text-xs">
-          <a href="#about" class="text-muted">Privacy Policy</a>
-          <a href="#about" class="text-muted">Terms of Service</a>
-          <a href="#about" class="text-muted">Hyperlink Policy</a>
+
+    <!-- 17. BUSINESS SOLUTION / VALUE IMPACT SECTION -->
+    <section id="business-impact" class="section business-impact-section bg-cream">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">DIGITAL TRANSFORMATION FOR LOCAL BOUTIQUES</span>
+          <h2 class="section-title">How Our Website Helps Your Business</h2>
+          <p class="section-subtitle">Solving everyday challenges for local fashion boutiques with an elegant web presence.</p>
         </div>
+
+        <div class="grid grid-2-col impact-grid">
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">🌐</span>
+              <h3 class="impact-title">Professional Online Presence</h3>
+            </div>
+            <p class="impact-desc">Establishes credibility and presents your boutique as a premium fashion destination accessible 24/7 to local shoppers.</p>
+          </div>
+
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">👗</span>
+              <h3 class="impact-title">Visual Collection Showcase</h3>
+            </div>
+            <p class="impact-desc">Overcomes physical store display space constraints by showcasing complete ranges of sarees, blouses, and lehengas online.</p>
+          </div>
+
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">📩</span>
+              <h3 class="impact-title">Simplified Customer Enquiries</h3>
+            </div>
+            <p class="impact-desc">Enables potential buyers to submit stitching and outfit enquiries anytime, reducing missed phone calls during busy hours.</p>
+          </div>
+
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">📍</span>
+              <h3 class="impact-title">Easy Location &amp; Hours Access</h3>
+            </div>
+            <p class="impact-desc">Helps new customers easily find your physical boutique with interactive map integration, direct phone links &amp; opening times.</p>
+          </div>
+
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">✨</span>
+              <h3 class="impact-title">Highlight Special Collections</h3>
+            </div>
+            <p class="impact-desc">Promote upcoming festive sales, new arrivals, and bridal consultations without costly printed brochures.</p>
+          </div>
+
+          <div class="impact-card reveal">
+            <div class="impact-header">
+              <span class="impact-icon">💬</span>
+              <h3 class="impact-title">Instant WhatsApp Integration</h3>
+            </div>
+            <p class="impact-desc">Allows instant 1-click customer chats directly to your boutique phone for fast conversions and personalized assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FAQ ACCORDION -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">GOT QUESTIONS?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding store visits, custom tailoring, and orders.</p>
+        </div>
+
+        <div class="faq-container reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need an appointment to visit Elegance Boutique?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Walk-ins are always welcome during our regular opening hours! However, for dedicated bridal consultations or custom trousseau planning, we recommend booking an enquiry in advance so our head stylist can prepare dedicated time for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does custom blouse stitching or tailoring take?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Standard custom blouse tailoring typically takes 3 to 5 business days. Hand-embroidered Maggam work or heavy bridal blouses take around 7 to 10 days depending on pattern complexity. Express options are available upon request.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I customize colors or embroidery on bridal lehengas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We offer full customization for fabric selection, color shades, zardozi/sequin embroidery density, and blouse necklines to suit your personal wedding theme.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can I inquire about product prices?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You can click the "Enquire Now" button on any product card or use our Enquiry Form. You can also chat directly via WhatsApp for instant price quotes and availability.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide alteration services for garments bought elsewhere?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, our master tailors provide alteration and fitting adjustments for ethnic wear, sarees, and blouses to ensure a comfortable and flattering fit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CUSTOMER ENQUIRY SECTION -->
+    <section id="enquiry" class="section enquiry-section bg-rose-light">
+      <div class="container">
+        <div class="grid grid-2-col enquiry-grid align-center">
+          <div class="enquiry-info reveal">
+            <span class="section-tagline">GET IN TOUCH</span>
+            <h2 class="section-title">Customer Enquiry &amp; Appointments</h2>
+            <p class="lead-text">
+              Have a question about a saree, custom blouse design, or bridal appointment? Fill out the form and our styling team will reach out to you promptly.
+            </p>
+
+            <div class="enquiry-highlights">
+              <div class="enquiry-step">
+                <span class="step-num">1</span>
+                <div>
+                  <strong>Submit Your Requirements</strong>
+                  <p>Tell us what category, outfit, or custom tailoring you need.</p>
+                </div>
+              </div>
+              <div class="enquiry-step">
+                <span class="step-num">2</span>
+                <div>
+                  <strong>Stylist Callback</strong>
+                  <p>Our team will contact you via phone or WhatsApp to discuss options.</p>
+                </div>
+              </div>
+              <div class="enquiry-step">
+                <span class="step-num">3</span>
+                <div>
+                  <strong>In-Store Visit &amp; Fitting</strong>
+                  <p>Visit our boutique for fabric selection, measurements, or pickup.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enquiry-form-card card reveal">
+            <h3 class="form-title">Send an Enquiry</h3>
+            
+            <div id="formSuccessMessage" class="form-success-alert hidden" role="alert">
+              <div class="success-icon">✅</div>
+              <div>
+                <strong>Thank you!</strong>
+                <p>Your enquiry has been received. The boutique will contact you soon.</p>
+                <small class="demo-subtext">* Note: This is a demo enquiry simulation.</small>
+              </div>
+            </div>
+
+            <form id="enquiryForm" novalidate>
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Ananya Sharma" required>
+                <span class="error-msg" id="fullNameError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                  <span class="error-msg" id="phoneNumberError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="e.g. ananya@example.com" required>
+                  <span class="error-msg" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="category">Interested Category <span class="required">*</span></label>
+                  <select id="category" name="category" class="form-control" required>
+                    <option value="" disabled selected>Select a category...</option>
+                    <option value="Sarees">Sarees</option>
+                    <option value="Blouses">Blouses</option>
+                    <option value="Lehengas">Lehengas</option>
+                    <option value="Kurtis">Kurtis</option>
+                    <option value="Bridal Wear">Bridal Wear</option>
+                    <option value="Custom Tailoring">Custom Tailoring</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span class="error-msg" id="categoryError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferredDate">Preferred Visit Date <span class="required">*</span></label>
+                  <input type="date" id="preferredDate" name="preferredDate" class="form-control" required>
+                  <span class="error-msg" id="preferredDateError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message / Outfit Details <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Describe the outfit style, fabric choice, or stitching requirements..." required></textarea>
+                <span class="error-msg" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tagline">LOCATE OUR SHOWROOM</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">We would love to welcome you in person. Feel free to reach out anytime!</p>
+        </div>
+
+        <div class="grid grid-3-col contact-info-grid">
+          <div class="contact-card reveal">
+            <div class="contact-icon">📍</div>
+            <h3 class="contact-card-title">Boutique Address</h3>
+            <p class="contact-card-desc">
+              <strong>Elegance Boutique</strong><br>
+              123 Silk Saree Street, Fashion Avenue,<br>
+              Near Metro Station, City Center,<br>
+              Pin Code: 500001 (Demo Location)
+            </p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-text">Get Directions &rarr;</a>
+          </div>
+
+          <div class="contact-card reveal">
+            <div class="contact-icon">📞</div>
+            <h3 class="contact-card-title">Phone &amp; WhatsApp</h3>
+            <p class="contact-card-desc">
+              Phone: +91 98765 43210 (Demo)<br>
+              Email: info@eleganceboutique.demo<br>
+              WhatsApp Support Available
+            </p>
+            <div class="contact-card-actions">
+              <a href="https://wa.me/919876543210?text=Hello%20Elegance%20Boutique,%20I%20would%20like%20to%20enquire%20about%20your%20collections." 
+                 target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                 <span>💬</span> WhatsApp Enquiry
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card reveal">
+            <div class="contact-icon">⏰</div>
+            <h3 class="contact-card-title">Opening Hours</h3>
+            <p class="contact-card-desc">
+              <strong>Monday – Saturday:</strong><br>
+              10:30 AM – 8:30 PM<br><br>
+              <strong>Sunday:</strong><br>
+              11:30 AM – 7:00 PM
+            </p>
+            <span class="status-indicator active">● Open Today</span>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Placeholder Container -->
+        <div class="map-container reveal mt-4">
+          <div class="map-frame">
+            <div class="map-placeholder">
+              <div class="map-content">
+                <span class="map-pin">📍</span>
+                <h4>Elegance Boutique Showroom</h4>
+                <p>123 Silk Saree Street, Fashion Avenue, City Center</p>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-2">Open in Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="social-box text-center reveal mt-4">
+          <h4 class="social-title">Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026l.032-.026z"/></svg>
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.004-1.052z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="grid grid-4-col footer-grid">
+        <div class="footer-col footer-about">
+          <a href="#home" class="brand-logo footer-logo">
+            <span class="logo-symbol">✨</span>
+            <span class="logo-text">
+              <span class="logo-title">Elegance</span>
+              <span class="logo-subtitle">BOUTIQUE</span>
+            </span>
+          </a>
+          <p class="footer-text">
+            Discover timeless ethnic styles and contemporary fashion thoughtfully selected for everyday elegance, celebrations, and special occasions.
+          </p>
+          <div class="customize-notice">
+            <small>💡 <strong>Note for Boutique Owners:</strong> Easily customize names, images, products &amp; details in HTML.</small>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#offers">Special Offers</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Sarees">Silk &amp; Designer Sarees</a></li>
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Blouses">Custom Blouses</a></li>
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Lehengas">Bridal Lehengas</a></li>
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Kurtis">Designer Kurtis</a></li>
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Ethnic Wear">Ethnic Suit Sets</a></li>
+            <li><a href="#collections" class="filter-btn-trigger" data-category="Other">Party Gowns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Visit Us</h4>
+          <address class="footer-contact">
+            <p>📍 123 Silk Saree Street, Fashion Avenue, City Center</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ info@eleganceboutique.demo</p>
+            <p>⏰ Mon - Sat: 10:30 AM - 8:30 PM</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Elegance Boutique. All Rights Reserved. | Future Interns Internship Task 3 Web Project.</p>
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">&uarr;</button>
       </div>
     </div>
   </footer>
 
-  <!-- App Scripts -->
-  <script src="js/db.js"></script>
-  <script src="js/auth.js"></script>
-  <script src="js/eligibility.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/views.js"></script>
-  <script src="js/app.js"></script>
+  <!-- Script File -->
+  <script src="script.js"></script>
 </body>
 </html>

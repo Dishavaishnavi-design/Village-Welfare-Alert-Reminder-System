@@ -1,0 +1,44 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#362428"/>
+      <stop offset="100%" stop-color="#1A1412"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <pattern id="pat" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 40 20 L 20 40 L 0 20 Z" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
+  <rect width="600" height="450" fill="url(#pat)"/>
+
+  <!-- Golden Frame -->
+  <rect x="20" y="20" width="560" height="410" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  <rect x="26" y="26" width="548" height="398" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Decorative Corners -->
+  <path d="M 20 40 L 40 20 M 580 40 L 560 20 M 20 410 L 40 430 M 580 410 L 560 430" stroke="#D4AF37" stroke-width="1.5"/>
+
+  <!-- Central Emblem / Icon Base -->
+  <circle cx="300" cy="180" r="70" fill="#2C221E" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="300" cy="180" r="62" fill="none" stroke="#E8B4B8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Icon Design -->
+  <g transform="translate(300, 180)">
+    <path d="M0 -40 C15 -20 35 -15 40 0 C35 15 15 20 0 40 C-15 20 -35 15 -40 0 C-35 -15 -15 -20 0 -40 Z" fill="#E8B4B8" opacity="0.25"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+    <path d="M -15 0 L 15 0 M 0 -15 L 0 15" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#D4AF37"/>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <rect x="60" y="280" width="480" height="1" fill="url(#goldGrad)" opacity="0.5"/>
+  <text x="300" y="325" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#FAF7F2" text-anchor="middle" letter-spacing="1">STYLING SESSION</text>
+  <text x="300" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#E8B4B8" text-anchor="middle" letter-spacing="2">Personalized Client Guidance</text>
+  <text x="300" y="390" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#D4AF37" text-anchor="middle" opacity="0.8">ELEGANCE BOUTIQUE COLLECTION</text>
+</svg>

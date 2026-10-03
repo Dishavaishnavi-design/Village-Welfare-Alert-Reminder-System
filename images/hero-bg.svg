@@ -1,0 +1,38 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F1917"/>
+      <stop offset="40%" stop-color="#3A2528"/>
+      <stop offset="80%" stop-color="#2C221E"/>
+      <stop offset="100%" stop-color="#140F0E"/>
+    </linearGradient>
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F3E5AB" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#E8B4B8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1F1917" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#heroGrad)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  
+  <!-- Subtle Ornamental Circles -->
+  <g opacity="0.12" stroke="#D4AF37" stroke-width="1" fill="none">
+    <circle cx="1400" cy="540" r="400"/>
+    <circle cx="1400" cy="540" r="320"/>
+    <circle cx="1400" cy="540" r="240"/>
+    <circle cx="1400" cy="540" r="160"/>
+    <path d="M 1400 140 L 1400 940 M 1000 540 L 1800 540"/>
+  </g>
+
+  <!-- Flowing Aesthetic Curves (Saree Drape Simulation) -->
+  <path d="M 900 0 C 1100 300, 1300 400, 1920 300 L 1920 1080 L 700 1080 C 1000 800, 1100 500, 900 0 Z" fill="#E8B4B8" opacity="0.04"/>
+  <path d="M 1100 0 C 1300 400, 1400 600, 1920 700 L 1920 0 Z" fill="#D4AF37" opacity="0.06"/>
+
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="1074" width="1920" height="6" fill="url(#goldHighlight)"/>
+</svg>
